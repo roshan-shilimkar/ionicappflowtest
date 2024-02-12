@@ -1,20 +1,56 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <!-- <p>
+        <ion-button (click)="itemSelected()">itemSelected
+          ---------------------------++++++++++++++++++++++++++++++++</ion-button>
+      </p> -->
+        <!-- <h1>updated version</h1>-->
+        <ion-button (click)="performManualUpdate()">Perform manual update</ion-button>
+        <span *ngIf="updateStatus!=''">{{updateStatus}}</span>
+      </ion-col>
+    </ion-row>
+    <!-- <ion-row>
+      <ion-col>
+        <ion-button (click)="itemSelected()">itemSelected</ion-button>
+      </ion-col>
+    </ion-row> -->
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+    <ion-row>
+      <ion-col>
+        <ion-button (click)="openbrowser1()">openbrowser</ion-button>
+      </ion-col>
+    </ion-row>
+
+    ////////////////////////////////////////////
+
+    <ion-row *ngFor="let item of Moduleslist">
+      <ion-col>
+        <ion-button (click)="itemSelected(item)">
+          <b>{{item.ModuleName}}</b>
+        </ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        this is for hr module section .
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-button (click)="openfirstlink()">
+          <b>First Link</b>
+        </ion-button>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-button (click)="opensecolink()">
+          <b>Second Link</b>
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>
