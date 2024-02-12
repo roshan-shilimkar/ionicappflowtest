@@ -86,8 +86,6 @@ export class HomePage {
       'https://localhost/_capacitor_file_/data/user/0/io.ionic.starter/files/ionic_built_snapshots/' +
       this.app_path
       + '/index.html';
-
-      
     // 
     // this.path ="/data/user/0/io.ionic.starter/files/ionic_built_snapshots/a0f5f26a-8f0c-42c6-9bb3-47e9db66ee14"
     // /data/user/0/io.ionic.starter/files/ionic_built_snapshots/a0f5f26a-8f0c-42c6-9bb3-47e9db66ee14
